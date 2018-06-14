@@ -146,20 +146,20 @@ function calc_delay(words) {
 botui.message.add({
     delay: 1000,
     loading: true,
-    content: "Delayed message 1"
+    content: "Hallo Tim."
 
     }).then(function() {
     return botui.message.add({
       delay: 1000,
       loading: true,
-      content: "Delayed message 2"
+      content: "Hoe is de eerste rit van Roos vandaag gegaan?"
     });
 
     }).then(function() {
     return botui.message.add({
       delay: 1000,
       loading: true,
-      content: "Delayed message + question"
+      content: "Is ze veilig aangekomen?"
     });
 
     }).then(function () { 
@@ -172,7 +172,7 @@ botui.message.add({
         botui.message.bot({
         delay: 1000,
         loading: true,
-        content: 'Your answer is ' + res.value
+        content: 'Je geeft de volgende klacht door: ' + res.value + '. Is dit correct?'
         });
     });
 
